@@ -93,7 +93,8 @@ export default defineComponent({
     },
     methods: {
         async getEmployer(){
-            let url = "http://127.0.0.1:8000/api/get/employer/"+this.id;
+            let serve = import.meta.env.VITE_API_URL;
+            let url = serve+"/api/get/employer/"+this.id;
 
             const response = await fetch(url);
             if(response.ok){
@@ -111,7 +112,8 @@ export default defineComponent({
 
         },
         async getLevel(){
-            let url = "http://127.0.0.1:8000/api/get/level";
+            let serve = import.meta.env.VITE_API_URL;
+            let url = serve+"/api/get/level";
 
             const response = await fetch(url);
             if(response.ok){
@@ -130,8 +132,8 @@ export default defineComponent({
             
             if (!this.v$.$error) {
 
-
-                let url = "http://127.0.0.1:8000/api/update/employer";
+                let serve = import.meta.env.VITE_API_URL;
+                let url = serve+"/api/update/employer";
             
                 const response = await fetch(
                     url,

@@ -91,7 +91,8 @@ export default defineComponent({
     },
     methods: {
         async getEmployers(){
-            let url = "http://127.0.0.1:8000/api/get/employers";
+            let serve = import.meta.env.VITE_API_URL;
+            let url = serve+"/api/get/employers";
 
             const response = await fetch(url);
             if(response.ok){
@@ -110,7 +111,8 @@ export default defineComponent({
         },
 
         async deleteEmployers(id: any,index: any){
-            let url = "http://127.0.0.1:8000/api/delete/employer/"+id;
+            let serve = import.meta.env.VITE_API_URL;
+            let url = serve+"/api/delete/employer/"+id;
 
             
             const response = await fetch(url,
