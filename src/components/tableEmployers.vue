@@ -63,9 +63,7 @@
 <script lang="ts" >
 import { defineComponent } from 'vue';
 import { useToast } from "vue-toastification";
-import DataTable from 'datatables.net-vue3'
-import DataTablesCore from 'datatables.net';
-DataTable.use(DataTablesCore);
+
 export default defineComponent({
     name:'CounterOption',
     component:{},
