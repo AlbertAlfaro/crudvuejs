@@ -88,8 +88,8 @@ export default defineComponent({
     },
     methods: {
         async getLevel(){
-            let serve = import.meta.env.VITE_API_URL;
-            let url = serve+"/api/get/level";
+            //let serve = import.meta.env.VITE_API_URL;
+            let url = "https://app.jalfaro.xyz/apicrud/api/get/level";
 
             const response = await fetch(url);
             if(response.ok){
@@ -105,8 +105,8 @@ export default defineComponent({
         async setEmployer(){
             this.v$.$validate()
             if (!this.v$.$error) {
-                let serve = import.meta.env.VITE_API_URL;
-                let url = serve+"/api/set/employer";
+                //let serve = import.meta.env.VITE_API_URL;
+                let url = "https://app.jalfaro.xyz/apicrud/api/set/employer";
             
                 const response = await fetch(
                     url,

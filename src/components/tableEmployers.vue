@@ -89,8 +89,8 @@ export default defineComponent({
     },
     methods: {
         async getEmployers(){
-            let serve = import.meta.env.VITE_API_URL;
-            let url = serve+"/api/get/employers";
+            //let serve = import.meta.env.VITE_API_URL;
+            let url = "https://app.jalfaro.xyz/apicrud/api/get/employers";
 
             const response = await fetch(url);
             if(response.ok){
@@ -109,8 +109,8 @@ export default defineComponent({
         },
 
         async deleteEmployers(id: any,index: any){
-            let serve = import.meta.env.VITE_API_URL;
-            let url = serve+"/api/delete/employer/"+id;
+            //let serve = import.meta.env.VITE_API_URL;
+            let url = "https://app.jalfaro.xyz/apicrud/api/delete/employer/"+id;
 
             
             const response = await fetch(url,
