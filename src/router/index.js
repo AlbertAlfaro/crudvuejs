@@ -11,7 +11,7 @@ const router = createRouter({
             component: () => Promise.resolve(HomeView)
         },
         {
-            path: '/create/employer',
+            path: '/create/employer/',
             name: 'createEmployer',
             component: CreateEmployer
         },
