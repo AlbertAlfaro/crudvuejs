@@ -103,10 +103,10 @@ export default defineComponent({
             }
         
         },
-        async editEmployer(id:any){
+        async editEmployer(id_employer:any){
             try {
 
-                this.$router.push('/edit/employer/'+id);
+                this.$router.push({name: 'editEmployer',params:{id:id_employer}});
             }catch (err) {
                 throw new Error(`Problem handling something: ${err}.`);    
             }

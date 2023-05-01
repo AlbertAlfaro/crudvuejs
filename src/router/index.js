@@ -7,8 +7,8 @@ const router = createRouter({
     routes: [
         {
             path: '/', 
-            name: 'home', 
-            component: () => HomeView
+            name: 'home',
+            component: () => Promise.resolve(HomeView)
         },
         {
             path: '/create/employer',
