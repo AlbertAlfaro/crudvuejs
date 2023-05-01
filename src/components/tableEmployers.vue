@@ -1,10 +1,10 @@
 <template>
-    <a href="/create/employer">
+    
 
-        <button type="button" class="text-white my-2 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Create
-        </button>
-    </a>
+    <button @click="createEmployer" type="button" class="text-white my-2 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Create
+    </button>
+    
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -107,6 +107,15 @@ export default defineComponent({
             try {
 
                 this.$router.push({name: 'editEmployer',params:{id:id_employer}});
+            }catch (err) {
+                throw new Error(`Problem handling something: ${err}.`);    
+            }
+            
+        },
+        async createEmployer(){
+            try {
+
+                this.$router.push({name: 'createEmployer'});
             }catch (err) {
                 throw new Error(`Problem handling something: ${err}.`);    
             }
