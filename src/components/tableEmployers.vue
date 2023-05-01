@@ -104,7 +104,12 @@ export default defineComponent({
         
         },
         async editEmployer(id:any){
-            this.$router.push('/edit/employer/'+id);
+            try {
+
+                this.$router.push('/edit/employer/'+id);
+            }catch (err) {
+                throw new Error(`Problem handling something: ${err}.`);    
+            }
             
         },
 
